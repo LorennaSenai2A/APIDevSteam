@@ -1,4 +1,5 @@
 using APIDevSteam.Data;
+using APIDevSteam.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -21,7 +22,7 @@ builder.Services.AddCors(options =>
 
 // Adicionar o serviço de autenticação
 // Serviço de EndPoints do Identity Framework
-builder.Services.AddIdentityApiEndpoints<IdentityUser>(options =>
+builder.Services.AddIdentityApiEndpoints<Usuario>(options =>
 {
     options.SignIn.RequireConfirmedEmail = false; // Exige confirmação de email
     options.SignIn.RequireConfirmedAccount = false; // Exige confirmação de conta
@@ -89,6 +90,6 @@ app.UseAuthorization(); // Habilita a autorização
 
 app.MapControllers(); // Mapeia os controladores
 
-app.MapGroup("/Usuario").MapIdentityApi<IdentityUser>(); // Mapeia o grupo de endpoints de autenticação
+app.MapGroup("/Usuario").MapIdentityApi<Usuario>(); // Mapeia o grupo de endpoints de autenticação
 
 app.Run(); // Executa o aplicativo

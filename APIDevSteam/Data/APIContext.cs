@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using APIDevSteam.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace APIDevSteam.Data
 {
-    public class APIContext : IdentityDbContext
+    public class APIContext : IdentityDbContext<Usuario>
     {
         public APIContext(DbContextOptions<APIContext> options) : base(options)
         {
