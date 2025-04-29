@@ -16,6 +16,8 @@ namespace APIDevSteam.Data
 
         public DbSet<Carrinho> Carrinhos { get; set; }
         public DbSet<ItemCarrinho> ItemCarrinhos { get; set; }
+        public DbSet<Cupom> Cupons { get; set; }
+        public DbSet<CupomCarrinho> CuponsCarrinhos { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -28,6 +30,8 @@ namespace APIDevSteam.Data
             builder.Entity<JogoCategoria>().ToTable("JogosCategorias");
             builder.Entity<Carrinho>().ToTable("Carrinhos");
             builder.Entity<ItemCarrinho>().ToTable("ItemCarrinhos");
+            builder.Entity<Cupom>().ToTable("Cupons");
+            builder.Entity<CupomCarrinho>().ToTable("CuponsCarrinhos");
         }
     }
 
