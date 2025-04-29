@@ -8,7 +8,6 @@
         public int Desconto { get; set; }
         public string Banner { get; set; }
         public string Deescricao { get; set; }
-
-
+        public decimal? PrecoOriginal { get; set; }
     }
 }

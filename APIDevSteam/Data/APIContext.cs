@@ -17,6 +17,7 @@ namespace APIDevSteam.Data
         public DbSet<Carrinho> Carrinhos { get; set; }
         public DbSet<ItemCarrinho> ItemCarrinhos { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
